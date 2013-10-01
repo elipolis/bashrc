@@ -112,4 +112,4 @@ alias gst="git status"
 alias gph="git push"
 alias gpl="git pull"
 
-alias grep="grep -Rin --color" 
+alias grep="grep -n --color" 

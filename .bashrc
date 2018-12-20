@@ -84,6 +84,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias find_name='find . | grep -i '
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -113,5 +115,13 @@ git config --global color.status auto
 alias gst="git status"
 alias gph="git push"
 alias gpl="git pull"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 alias grep="grep -n --color" 
+
+# AWS VAULT
+if [[ $OS == "Linux" ]]; then
+  AWS_VAULT_BACKEND=secret-service
+fi
+
+
